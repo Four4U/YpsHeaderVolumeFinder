@@ -8,7 +8,7 @@
 
 # About
 This is a small program to find `EFI_FIRMWARE_VOLUME_HEADER`. It reads the binary file and found Header. The program checks correctness of volume header through a checksum and print data about it.<br>
-For use: enter the path to file(or name then file located in same directory.
+For use: enter the path to file(or name then file located in same directory)
 
 # EFI_FIRMWARE_VOLUME_HEADER
 
