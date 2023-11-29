@@ -185,10 +185,10 @@ unsigned Volume::new_id = 0;
 /* 
     Singleton фабрика класса тома
 */
-class FabricVolume
+class FactoryVolume
 {
 private:
-    FabricVolume()
+    FactoryVolume()
     {
 
     }
@@ -214,9 +214,9 @@ private:
             return false;
     }
 public:
-    static FabricVolume& getInstance()
+    static FactoryVolume& getInstance()
     {
-        static FabricVolume fv;
+        static FactoryVolume fv;
         return fv;
     }
 
@@ -257,7 +257,7 @@ int main(void)
     while(fin.read(&temp, sizeof(byte)))                //Читаем файл
         bin.push_back(temp);
 
-    std::vector<Volume> volumes = FabricVolume::getInstance().get_array_volumes(bin);
+    std::vector<Volume> volumes = FactoryVolume::getInstance().get_array_volumes(bin);
 
     for(int i = 0; i < volumes.size(); i++)
     {
